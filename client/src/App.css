@@ -7,6 +7,11 @@
   height: 80px;
 }
 
+main {
+  display:flex;
+  flex-direction:row;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;

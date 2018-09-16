@@ -1,5 +1,5 @@
 {
-  "name": "nyt-react",
+  "name": "web-dev-challenge",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeandraR/nyt-react.git"
+    "url": "git+https://github.com/LeandraR/web-dev-challenge.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LeandraR/nyt-react/issues"
+    "url": "https://github.com/LeandraR/web-dev-challenge/issues"
   },
-  "homepage": "https://github.com/LeandraR/nyt-react#readme",
+  "homepage": "https://github.com/LeandraR/web-dev-challenge#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",

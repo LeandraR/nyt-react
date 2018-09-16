@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 
 axios.get('https://api.github.com/search/repositories?q=' + "shopify" + '&sort=stars&order=desc/releases/latest')
     .then(function (response) {
-        for (let i = 0; i<1; i++){
+        for (let i = 0; i<10; i++){
             // let owner = response.data.items[i].owner.login;
             let repo = response.data.items[i].full_name;
             // console.log(`# ${[i+1]}. owner is: ${owner}`);
@@ -37,7 +37,13 @@ axios.get('https://api.github.com/search/repositories?q=' + "shopify" + '&sort=s
             axios.get(`https://api.github.com/repos/${repo}/releases/latest`)
                 .then(function (res) {
                     console.log(res.data.tag_name);
+                })
+                .catch(error => {
+                    // console.log(error.response);
+                    console.log("version not found");
                 });
+
+            //TODO: in react, do 'if response, render response, else render '-'
 
             // axios.get(`https://api.github.com/repos/nozzlegear/ShopifySharp/releases/latest`)
             //     .then(function (res) {
@@ -49,7 +55,11 @@ axios.get('https://api.github.com/search/repositories?q=' + "shopify" + '&sort=s
             // console.log(response.status); // ex.: 200
         }
 
-    });
+    })
+    .catch(error => {
+        // console.log(error.response);
+        console.log("serach not found");
+    });;
 
 
 // axios.get('https://api.github.com/search/respositories/?q=' + "javascript" + "+language:assembly&sort=stars&order=desc")
