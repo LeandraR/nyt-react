@@ -1,0 +1,58 @@
+.visuallyhidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+input {
+    border-radius:3px;
+    box-shadow:none;
+    padding:2%;
+    border-style:none;
+    border:1px solid black;
+    width:70%;
+    font-size:0.9em;
+    margin-right:2%;
+}
+
+#submit {
+    background-color:#7433F1;
+    color:white;
+    padding:2%;
+    border-radius:5px;
+    width:23%;
+    font-size:0.9em;
+}
+
+#submit:hover {
+    background-color:#6624d2;
+}
+
+.add-text {
+    color:#7433F1;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.searchResults {
+    width:50%;
+    margin:0 auto;
+    padding:50px;
+}
+
+.SearchResults__addbutton{
+    text-align:right;
+}
+
+thead tr th {
+    padding-bottom:3%;
+}
+
+

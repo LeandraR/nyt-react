@@ -1,0 +1,12 @@
+th, td {
+    text-align: left;
+}
+
+table {
+    width:100%;
+    padding-top:5vh;
+}
+
+.TableRow__add-text {
+    text-align:right;
+}
