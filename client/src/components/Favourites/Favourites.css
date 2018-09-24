@@ -1,0 +1,25 @@
+.favourites {
+    background-color:#F3ECFE;
+    width:50%;
+    padding:50px;
+    min-height:100vh;
+}
+
+.Favourites__table {
+    padding:0;
+}
+
+.Favourite__thead {
+    margin-bottom:15px;
+}
+
+.Favourites__name, .SearchResults__name {
+    width:35%;
+}
+
+@media (max-width:950px){
+  .favourites, .searchResults {
+    margin:0 auto;
+    width:100%;
+  }
+}

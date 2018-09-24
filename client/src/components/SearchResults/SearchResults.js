@@ -19,32 +19,32 @@ class SearchResults extends Component {
             favourites: []
         }
     }
-//listen for changes in search input
+
     handleChange(event) {
         this.setState({
             search: event.target.value
         });
     }
-//adds repo to favourites
+
     handleClick = (id) => {
         this.setState({
             favourites: this.state.favourites.concat(id)
         })
     }
-//removes repo from favourites
+
     removeFave(id){
         let newArrayFaves = this.state.favourites.filter(x => {return x.id !== id});
         this.setState({
             favourites: [...newArrayFaves]
         })
     }
-//on submit, queries GitHub API
+
     handleSubmit(event) {
         event.preventDefault();
         this.searchResults();
     }
 
-//adds first 10 API responses to state
+
     searchResults = () => {
         let query = this.state.search;
           axios.get(`https://api.github.com/search/repositories?q=${query}`)
@@ -56,7 +56,7 @@ class SearchResults extends Component {
                 this.queryVersion(this.state.repo);
             })
         }
-//queries API for latest version of repo
+
     queryVersion = (repo) => {
         repo.map((res) => {
             axios.get(`https://api.github.com/repos/${res.full_name}/releases/latest`)
@@ -81,6 +81,10 @@ class SearchResults extends Component {
         }
         );
     };
+
+
+
+
 
   render() {
     return (
