@@ -11,6 +11,11 @@ main {
   display:flex;
   flex-direction:row;
 }
+@media (max-width:950px){
+  main {
+    flex-direction:column;
+  }
+}
 
 .App-header {
   background-color: #222;
